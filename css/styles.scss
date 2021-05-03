@@ -2,49 +2,47 @@ $lt-gray: #ddd;
 $background-dark: #144667;
 $background-light: #326485;
 $background-pale: #3e6da3;
-
 // Height variables
 $carousel-item-height: 300px;
-
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
-	margin:0px auto;
-	padding: $pad-up-dn $pad-left-right;
+    margin: 0 auto;
+    padding: $pad-up-dn $pad-left-right;
 }
 
-.row-header{
+.row-header {
     @include zero-margin(0px,0px);
 }
 
 .row-content {
     @include zero-margin(50px,0px);
     border-bottom: 1px ridge;
-    min-height:400px;
+    min-height: 400px;
 }
 
-.footer{
+.footer {
     background-color: $background-pale;
-    @include zero-margin(20px, 0px);
+    @include zero-margin(20px, 0);
 }
 
 .jumbotron {
     @include zero-margin(70px,30px);
-    background: $background-light ;
-    color:floralwhite;
+    background: $background-light;
+    color: floralwhite;
 }
 
-address{
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
+address {
+    font-size: 80%;
+    margin: 0;
+    color: #0f0f0f;
 }
 
-body{
-    padding:50px 0px 0px 0px;
-    z-index:0;
+body {
+    padding: 50px 0 0;
+    z-index: 0;
 }
 
 .navbar-dark {
-     background-color: $background-dark;
+    background-color: $background-dark;
 }
 
 .tab-content {
@@ -55,10 +53,11 @@ body{
 }
 
 .carousel {
-    background:$background-dark;
+    background: $background-dark;
 
     .carousel-item {
         height: $carousel-item-height;
+
         img {
             position: absolute;
             top: 0;
@@ -69,8 +68,23 @@ body{
 }
 
 #carouselButton {
-    right:0px;
+    right: 0;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     z-index: 1;
+}
+
+#ReserveModal,
+#loginModal {
+    .modal-header {
+        background: $background-light;
+
+        button {
+            color: white;
+        }
+    }
+
+    .modal-body {
+        background-color: $background-pale;
+    }
 }
