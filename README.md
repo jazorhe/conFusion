@@ -97,5 +97,16 @@ npm -v
 
 [Fixes for parallelshell](https://stackoverflow.com/a/53467253)
 
+`npm install --save-dev rimraf@2.6.2`
+`rimraf` cleans folder.
+
+`npm -g install copyfiles@2.0.0`
+`npm -g install imagemin-cli@3.0.0`
+`npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7`
+
+`usemin` mins css, js and html
+
+`gitignore` the `dist` folder
+
 ## Useful Links
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
