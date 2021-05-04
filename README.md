@@ -88,3 +88,14 @@ npm -v
 `npm install -g less@2.7.2`
 
 `lessc styles.less styles.css`
+
+## NPM Scripts Part 1
+`npm install --save-dev onchange@3.3.0 parallelshell@3.0.2`
+
+`onchange` will watch changes for scss files and automatically compile css.
+`parallelshell` will allow multiple npm scripts to be run simutaneously.
+
+[Fixes for parallelshell](https://stackoverflow.com/a/53467253)
+
+## Useful Links
+- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
