@@ -221,6 +221,52 @@ npm install grunt-browser-sync@2.2.0 --save-dev
 
 `grunt`
 
+### Copying the Files and Cleaning Up the Dist Folder
+- you will install the Grunt modules to copy over files to a distribution folder named dist, and clean up the dist folder when needed. To do this, install the following Grunt modules:
+
+```
+npm install grunt-contrib-copy@1.0.0 --save-dev
+npm install grunt-contrib-clean@1.1.0 --save-dev
+```
+
+-You will now add the code to perform the copying of files to the dist folder, and cleaning up the dist folder. To do this, add the following code to Gruntfile.js. This should be added right after the configuration of the SASS task.:
+
+```
+,
+
+        copy: {
+            html: {
+                files: [
+                {
+                    //for html
+                    expand: true,
+                    dot: true,
+                    cwd: './',
+                    src: ['*.html'],
+                    dest: 'dist'
+                }]                
+            },
+            fonts: {
+                files: [
+                {
+                    //for font-awesome
+                    expand: true,
+                    dot: true,
+                    cwd: 'node_modules/font-awesome',
+                    src: ['fonts/*.*'],
+                    dest: 'dist'
+                }]
+            }
+        },
+
+        clean: {
+            build: {
+                src: [ 'dist/']
+            }
+        }
+```
+
+
 
 ## Useful Links
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
